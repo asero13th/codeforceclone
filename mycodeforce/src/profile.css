@@ -1,0 +1,25 @@
+.profile-pic{
+    width: 150px;
+    height:150px;
+    border-radius: 50%;
+    object-fit:cover;
+    margin-top: 20px;
+}
+.codeforce-handle{
+    color: #00000099;
+    text-align: center;
+    align-self: center;
+}
+.profile-div{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+.profile-header{
+    text-align: center;
+}
+.solved-problems{
+    display: inline;
+    flex-direction: row;
+    justify-content: space-between;
+}

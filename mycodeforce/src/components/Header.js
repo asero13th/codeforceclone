@@ -3,19 +3,19 @@ import useFetchApi from './useFetchApi'
 const PERSONAL_INFO = "https://codeforces.com/api/user.info?handles=aserhailu2020"
 const Header = () => {
 
-  // const {data, isLoading, error} = useFetchApi(PERSONAL_INFO)
-  // if (isLoading){
-  //   return <div><h3>loading...</h3></div>
-  // }
-  // if (error){
-  //   return <div><h3>Error</h3> {error}</div>
-  // }
+  const {data, isLoading, error} = useFetchApi(PERSONAL_INFO)
+  if (isLoading){
+    return <div><h3>loading...</h3></div>
+  }
+  if (error){
+    return <div><h3>Error</h3> {error}</div>
+  }
 
-  // if (data == null){
-  //   return <div><h3>no data available</h3></div>
-  // }
+  if (data == null){
+    return <div><h3>no data available</h3></div>
+  }
 
-  // console.log(data)
+  console.log(data)
   
   return (
     <div className='nav'>
@@ -30,9 +30,9 @@ const Header = () => {
         <a href='http://codeforces.com' rel="noreferrer" target="_blank">Discus</a>
         </div>
 
-        {/* <div className='profile'>
+        <div className='profile'>
           <img className='profile-photo' src = {data.result[0].titlePhoto} alt="codeforces profile pic"/>
-        </div> */}
+        </div>
     </div>
   )
 }

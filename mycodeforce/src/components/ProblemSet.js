@@ -9,9 +9,10 @@ const ProblemSet = (props) => {
        .map( (item) => 
        {
         return(
-          <p key={props.data.index}>{item.name}</p>
+          <div className='problemset'>
+            <p key={props.data.index}>{item.name}</p>
+          </div>
         )
-        
        })}
     </div>
   )

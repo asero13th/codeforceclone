@@ -3,3 +3,30 @@
     flex-direction: row;
     justify-content: space-between;
 }
+.profile-right-side-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+}
+.total-problem-in-circle{
+    border: 1px solid;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin-bottom: 5px;
+    transition: 500ms;
+}
+.total-problem-in-circle:hover{
+    border-radius: 50%;
+}
+.submmision-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.problem-tag{
+    font-size: 13px;
+    color: #00000099;
+}

@@ -1,10 +1,6 @@
 import React from 'react'
 import useFetchApi from './useFetchApi';
 import UserStatus from './UserStatus';
-import Image from 'react-bootstrap/Image'
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -55,14 +51,12 @@ function Profile() {
             </Card>
         </Col>
 
-        <Col sm={8}>
+        <Col sm={9}>
             <UserStatus />
         </Col>
-
-        <col sm={2}>
-        </col>
+       
       </Row>
-    </Container>
+    </Container>  
   ) 
 }
 export default Profile

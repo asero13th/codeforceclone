@@ -1,9 +1,10 @@
 import React from 'react'
-import useFetchApi from './useFetchApi'
+import useFetchApi from './useFetchApi';
+import SimplifiedData from './SimplifiedData';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-const SUBMISSION_INFO = "https://codeforces.com/api/user.status?handle=aserhailu2020&from=1&maxCount=30";
+const SUBMISSION_INFO = "https://codeforces.com/api/user.status?handle=aserhailu2020&from=1";
 
 
 function UserStatus() {
@@ -20,13 +21,11 @@ function UserStatus() {
   if (data == null){
     return
   }
-   
-  console.log(data.result)
+
   return (
-    <div>
-        
-        <Card style={{ width: '37rem' }}>
-        <Card.Header>Submmisions</Card.Header>
+    <div className='profile-right-side-bar'>
+        <Card style={{ width: '30rem' }}>
+        <Card.Header> Last submmisions</Card.Header>
         {data.result.map((item) =>{
              const unixTime = parseInt(item.creationTimeSeconds); 
              const date = new Date(unixTime * 1000);
@@ -39,14 +38,18 @@ function UserStatus() {
             return(
                 <ListGroup variant="flush" className='mt-2'>
                     <ListGroup.Item style={{display :'flex', justifyContent:'space-between'}}>
-                            <span style={{color:"#000000eE3", fontSize:"14px"}}>{item.problem.index}.{item.problem.name}</span>
+                            <span style={{color:"#000000eE3", fontSize:"14px"}}>{item.problem.index}. {item.problem.name}</span>
                             {acceptance === "OK" ? <span style={{color: acceptance === 'OK'? 'green': 'red', fontSize:"14px"}}>Accepted</span>:<span style={{color: acceptance === 'OK'? 'green': 'red',fontSize:"14px"}}>Wrong answer</span>}
                             <span style={{color:"#00000099", fontSize:"12px"}}>{diffDays} days ago</span>
                     </ListGroup.Item>
-                </ListGroup>    
+                </ListGroup>
             )
         })}
+
         </Card>
+        <div>
+            <SimplifiedData data={data.result} />
+        </div>
     </div>
   )
 }

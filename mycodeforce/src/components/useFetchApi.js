@@ -54,10 +54,8 @@ function useFetchApi(url) {
           dispatch({type: actions.ERROR, payload: error.message})
         }
       }
-
       fetchData();
   },[url]);
-
   return state
 }
 

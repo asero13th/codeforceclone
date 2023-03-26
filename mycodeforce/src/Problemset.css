@@ -12,3 +12,7 @@
 .right-sidebar{
     width: 60%;
 }
+.problem-catagory{
+    display: flex;
+    justify-content: space-between;
+}

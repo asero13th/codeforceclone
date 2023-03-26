@@ -3,8 +3,10 @@ import useFetchApi from './useFetchApi';
 import { Button } from 'react-bootstrap';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion';
-
-
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Form from 'react-bootstrap/Form';
 const problemTags = 
 
   {
@@ -70,8 +72,34 @@ console.log(data)
               })
             }
       </div>
-      <div className='right-sidebar mt-3'>
+      <div className='right-sidebar mt-5'>
       <ListGroup>
+        <div className='mb-3 problem-catagory'>
+          <DropdownButton variant='light' id="dropdown-basic-button" title="Difficulty" className='mr-2'>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </DropdownButton>
+        <DropdownButton variant='light' id="dropdown-basic-button" title="Tags" className='ml-2'>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </DropdownButton>
+        <DropdownButton variant='light' id="dropdown-basic-button" title="Status" className='ml-2'>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </DropdownButton>
+        <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+        </div>
         {data.result.problems.map((item) => {
           return (
             <Accordion defaultActiveKey={['0']} alwaysOpen>
@@ -79,11 +107,11 @@ console.log(data)
         <Accordion.Header>{item.name}</Accordion.Header>
         <Accordion.Body>
         <ListGroup>
-          <ListGroup.Item><span>difficulty - </span><span>{item.rating}</span></ListGroup.Item>
-          <ListGroup.Item><span>Index - </span><span>{item.index}</span></ListGroup.Item>
-          <ListGroup.Item><span>Related topics: </span>{item.tags.map(item => <span> {item}</span>)}</ListGroup.Item>
-          <ListGroup.Item><span>contest Id - </span><span>{item.contestId}</span></ListGroup.Item>
-          <ListGroup.Item><span>Type - </span><span>{item.type}</span></ListGroup.Item>
+          <ListGroup.Item><span>difficulty - </span><span className='text-muted'>{item.rating}</span></ListGroup.Item>
+          <ListGroup.Item><span>Index - </span><span className='text-muted' >{item.index}</span></ListGroup.Item>
+          <ListGroup.Item><span>Related topics: </span>{item.tags.map(item => <span className='text-muted'> {item}</span>)}</ListGroup.Item>
+          <ListGroup.Item><span>contest Id - </span><span className='text-muted'>{item.contestId}</span></ListGroup.Item>
+          <ListGroup.Item><span>Type - </span><span className='text-muted'>{item.type}</span></ListGroup.Item>
     </ListGroup>
         </Accordion.Body>
       </Accordion.Item>

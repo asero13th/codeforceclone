@@ -3,16 +3,34 @@
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 60%;
+    
 }
 .problem-tag{
     margin: 5px;
     padding: 0; 
 }
-.right-sidebar{
-    width: 60%;
-}
 .problem-catagory{
     display: flex;
     justify-content: space-between;
+}
+.problem-tags-button{
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    width: 60%;
+}
+.problem-tags-container{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-side-bar{
+    margin-left: 10px;
+    width: 60%;
+}
+.right{
+    box-shadow: 0 0 20px 10px rgba(0, 0,0, 0.1);
 }

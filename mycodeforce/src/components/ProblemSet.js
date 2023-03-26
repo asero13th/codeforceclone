@@ -7,9 +7,10 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Form from 'react-bootstrap/Form';
-const problemTags = 
+import Card from 'react-bootstrap/Card';
 
-  {
+
+const problemTags =   {
     BRUTE_FORCE: "brute force",
     BINARY_SEARCH : "binary search",
     DATA_STRUCTURE : "data structures",
@@ -61,9 +62,21 @@ function ProblemSet() {
   }
 console.log(data)
   return (
-      <div className='container'>
-        
-        <div className='problem-tags mt-3'>
+    <div className='problem-tags-container'>
+      <div className='left-side-bar'>
+      <div className='btn' style={{display: 'flex', justifyContent: "space-between"}}>
+      
+      <Button variant="outline-success" size="lg" className='mt-3'>
+        Solved problems
+      </Button>
+      
+
+      <Button variant="outline-info" size="lg" className='mt-3 mr-2'>
+        All problem
+      </Button>
+      </div>
+        <hr/>
+        <div className='problem-tags '>
             {
               Object.keys(problemTags).map((item) =>{
                 return <div className='problem-tag'>
@@ -72,7 +85,7 @@ console.log(data)
               })
             }
       </div>
-      <div className='right-sidebar mt-5'>
+      <div className='mt-5'>
       <ListGroup>
         <div className='mb-3 problem-catagory'>
           <DropdownButton variant='light' id="dropdown-basic-button" title="Difficulty" className='mr-2'>
@@ -90,6 +103,9 @@ console.log(data)
               <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
               <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
         </DropdownButton>
+        <Button variant="light" size="md">
+          random
+      </Button>
         <Form className="d-flex">
             <Form.Control
               type="search"
@@ -118,11 +134,58 @@ console.log(data)
     </Accordion>
           )
         })}
-        
+      
       </ListGroup>
       </div>
+      <div>
+        
       </div>
-    
+      </div>
+      <div>
+      <div>
+          <Card className='right mt-3' style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="https://www.cs.usask.ca/images/news/2019/trophy-code.png" />
+          <Card.Body>
+            <Card.Title>Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+          <ListGroup className="list-group-flush">
+            <ListGroup.Item>Cras justo odio</ListGroup.Item>
+            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+          </ListGroup>
+          <Card.Body>
+            <Card.Link href="#">Card Link</Card.Link>
+            <Card.Link href="#">Another Link</Card.Link>
+          </Card.Body>
+        </Card>
+      </div>
+      <div>
+          <Card className='right mt-5' style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="https://www.cs.usask.ca/images/news/2019/trophy-code.png" />
+          <Card.Body>
+            <Card.Title>Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+          <ListGroup className="list-group-flush">
+            <ListGroup.Item>Cras justo odio</ListGroup.Item>
+            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+          </ListGroup>
+          <Card.Body>
+            <Card.Link href="#">Card Link</Card.Link>
+            <Card.Link href="#">Another Link</Card.Link>
+          </Card.Body>
+        </Card>
+      </div>
+      </div>
+    </div>    
   )
     
 } 

@@ -1,0 +1,14 @@
+.problem-tags{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.problem-tag{
+    margin: 5px;
+    padding: 0; 
+}
+.right-sidebar{
+    width: 60%;
+}

@@ -12,10 +12,9 @@ const Header = () => {
   }
 
   if (data == null){
-    return <div><h3>no data available</h3></div>
+    return 
   }
 
-  console.log(data)
   
   return (
     <div className='nav'>

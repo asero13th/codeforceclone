@@ -8,7 +8,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
-
+import Contest from './Contest';
 
 const problemTags =   {
     BRUTE_FORCE: "brute force",
@@ -142,48 +142,7 @@ console.log(data)
       </div>
       </div>
       <div>
-      <div>
-          <Card className='right mt-3' style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="https://www.cs.usask.ca/images/news/2019/trophy-code.png" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-          </Card.Body>
-          <ListGroup className="list-group-flush">
-            <ListGroup.Item>Cras justo odio</ListGroup.Item>
-            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-          </ListGroup>
-          <Card.Body>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
-          </Card.Body>
-        </Card>
-      </div>
-      <div>
-          <Card className='right mt-5' style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="https://www.cs.usask.ca/images/news/2019/trophy-code.png" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-          </Card.Body>
-          <ListGroup className="list-group-flush">
-            <ListGroup.Item>Cras justo odio</ListGroup.Item>
-            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-          </ListGroup>
-          <Card.Body>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
-          </Card.Body>
-        </Card>
-      </div>
+          <Contest />
       </div>
     </div>    
   )
